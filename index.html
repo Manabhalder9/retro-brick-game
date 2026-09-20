@@ -78,6 +78,21 @@
       </button>
     </section>
 
+    <div class="settings-strip" aria-label="Console settings">
+      <div class="settings-header">SETTINGS</div>
+      <div class="settings-row">
+        <span>Console Color:</span>
+        <div class="swatches" role="group" aria-label="Console color options">
+          <button class="swatch active" type="button" data-console-color="#3d76c4" style="--swatch:#3d76c4" aria-label="Blue"></button>
+          <button class="swatch" type="button" data-console-color="#5b7c38" style="--swatch:#5b7c38" aria-label="Green"></button>
+          <button class="swatch" type="button" data-console-color="#d68a2f" style="--swatch:#d68a2f" aria-label="Orange"></button>
+          <button class="swatch" type="button" data-console-color="#5f3f8f" style="--swatch:#5f3f8f" aria-label="Purple"></button>
+          <button class="swatch" type="button" data-console-color="#2b2d2f" style="--swatch:#2b2d2f" aria-label="Black"></button>
+          <button class="swatch" type="button" data-console-color="#f2f4f5" style="--swatch:#f2f4f5" aria-label="White"></button>
+        </div>
+      </div>
+    </div>
+
     <footer>BRICK GAME</footer>
   </main>
 
@@ -85,17 +100,14 @@
     <form method="dialog" class="settings-panel">
       <button class="close-settings" value="cancel" aria-label="Close settings">×</button>
       <h2>SETTINGS</h2>
-
       <label>
         Console color
         <input id="console-color" type="color" value="#1763a5">
       </label>
-
       <label>
         Button color
         <input id="button-color" type="color" value="#f4c63f">
       </label>
-
       <button class="settings-save" value="default">DONE</button>
     </form>
   </dialog>
