@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#1763a5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <title>Brick Game</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="console" aria-label="Brick Game handheld console">
+    <section class="lcd-frame">
+      <div class="lcd-screen">
+        <header class="screen-header">
+          <h1>TETRIS</h1>
+
+          <div class="next-panel">
+            <span>NEXT</span>
+            <div id="next-grid" class="next-grid" aria-label="Next piece"></div>
+          </div>
+        </header>
+
+        <div class="screen-content">
+          <div id="board" class="board" role="grid" aria-label="Tetris board"></div>
+
+          <aside class="stats" aria-label="Game statistics">
+            <div>
+              <span>HI</span>
+              <strong id="high-score">000000</strong>
+            </div>
+            <div>
+              <span>SCORE</span>
+              <strong id="score">000000</strong>
+            </div>
+            <div>
+              <span>LEVEL</span>
+              <strong id="level">01</strong>
+            </div>
+            <div>
+              <span>LINES</span>
+              <strong id="lines">000</strong>
+            </div>
+          </aside>
+        </div>
+
+        <div id="status-message" class="status-message" hidden>GAME OVER</div>
+      </div>
+    </section>
+
+    <section class="system-controls" aria-label="System controls">
+      <button class="mini-button" data-action="power">POWER</button>
+      <button class="mini-button" data-action="sound">SOUND</button>
+      <button class="mini-button" data-action="pause">START/PAUSE</button>
+      <button class="mini-button" data-action="reset">RESET</button>
+    </section>
+
+    <section class="game-controls" aria-label="Game controls">
+      <div class="dpad">
+        <button class="game-button dpad-up" data-action="hard-drop" aria-label="Hard drop">▲</button>
+        <button class="game-button dpad-left" data-action="left" aria-label="Move left">◀</button>
+        <button class="game-button dpad-right" data-action="right" aria-label="Move right">▶</button>
+        <button class="game-button dpad-down" data-action="soft-drop" aria-label="Soft drop">▼</button>
+
+        <span class="control-label label-hard">HARD DROP</span>
+        <span class="control-label label-left">LEFT</span>
+        <span class="control-label label-right">RIGHT</span>
+        <span class="control-label label-soft">SOFT DROP</span>
+      </div>
+
+      <button class="rotate-button" data-action="rotate" aria-label="Rotate piece">
+        <span class="rotate-icon">↻</span>
+        <span>ROTATE</span>
+      </button>
+    </section>
+
+    <footer>BRICK GAME</footer>
+  </main>
+
+  <dialog id="settings-dialog">
+    <form method="dialog" class="settings-panel">
+      <button class="close-settings" value="cancel" aria-label="Close settings">×</button>
+      <h2>SETTINGS</h2>
+
+      <label>
+        Console color
+        <input id="console-color" type="color" value="#1763a5">
+      </label>
+
+      <label>
+        Button color
+        <input id="button-color" type="color" value="#f4c63f">
+      </label>
+
+      <button class="settings-save" value="default">DONE</button>
+    </form>
+  </dialog>
+
+  <script src="game.js"></script>
+  <script src="controls.js"></script>
+</body>
+</html>
