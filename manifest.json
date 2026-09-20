@@ -1,0 +1,11 @@
+{
+  "name": "Brick Game",
+  "short_name": "Brick Game",
+  "description": "A retro handheld-style mobile Tetris game.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1763a5",
+  "theme_color": "#1763a5",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
